@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Hongshi Liu - Research">
+	<meta name="description" content="Hongshi Liu - Projects and Research">
 	<meta name="author"      content="Hongshi Liu">
 
-	<title>Research | Hongshi Liu</title>
+	<title>Projects | Hongshi Liu</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 
@@ -27,11 +27,11 @@
 	<div id="head" class="parallax" parallax-speed="1">
 		<h1 id="logo" class="text-center">
 			<span class="title">Hongshi Liu</span>
-			<span class="tagline">Research &amp; Papers</span>
+			<span class="tagline">Projects &amp; Research</span>
 		</h1>
 	</div>
 
-	<nav class="navbar navbar-default navbar-sticky">
+	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 
 			<div class="navbar-header">
@@ -43,7 +43,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="cv.html">CV</a></li>
-					<li class="active"><a href="research.html">Research</a></li>
+					<li class="active"><a href="research.html">Projects</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 
@@ -58,37 +58,69 @@
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
-				<article class="post">
+				<article class="post" id="stochastic-calculus">
 					<header class="entry-header">
-						<h1 class="entry-title">Unraveling the Interplay Between ICT and Economic Development: A Case Study of the United States</h1>
-						<div class="entry-meta"><span class="posted-on">Sept 2023 &ndash; Dec 2023</span></div>
+						<h1 class="entry-title">Stochastic Calculus in Practice: Option Pricing &amp; Hedging in Python</h1>
+						<div class="entry-meta"><span class="posted-on">Nov 2026</span></div>
+					</header>
+					<div class="entry-content">
+						<p><strong>Objective:</strong> Applied continuous-time finance &mdash; geometric Brownian motion, Black&ndash;Scholes, and delta hedging &mdash; to real market data.</p>
+						<ul>
+							<li>Calibrated GBM to 5 years of daily data on a Shanghai-listed stock (vol 35.7% &plusmn; 0.7%, drift statistically insignificant).</li>
+							<li>Built Black&ndash;Scholes pricing, Greeks and an implied-volatility solver from scratch for SSE 50ETF options.</li>
+							<li>Backtested daily delta hedging of ~1,100 short ATM calls; hedging P&amp;L correlated 0.88 with the gap between pricing and realized volatility.</li>
+							<li>Replicated a protective put in 100-share lots, cutting the worst 60-day loss from 6.3% to 3.4%.</li>
+						</ul>
+						<p><a href="https://github.com/nitricmaster/quant-models"><i class="fa fa-github"></i> Code on GitHub</a></p>
+					</div>
+				</article>
+
+				<article class="post" id="uber-drunk-driving">
+					<header class="entry-header">
+						<h1 class="entry-title">Does Uber Reduce Drunk Driving? A Staggered Difference-in-Differences Analysis</h1>
+						<div class="entry-meta"><span class="posted-on">Jan 2026 &ndash; May 2026</span></div>
+					</header>
+					<div class="entry-content">
+						<p><strong>Objective:</strong> Estimated whether Uber's staggered entry into U.S. cities reduced drunk-driving fatalities.</p>
+						<ul>
+							<li>Constructed a 7,194-observation city-year panel combining NHTSA FARS DUI-fatality data, Census population data, and staggered Uber entry dates; defined DUI fatalities per 100,000 residents and treatment timing.</li>
+							<li>Estimated two-way fixed-effects difference-in-differences models with city and year fixed effects.</li>
+							<li>Assessed identification using an event study, placebo tests, sample-window robustness checks, and a Goodman-Bacon decomposition.</li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="post" id="ict-growth">
+					<header class="entry-header">
+						<h1 class="entry-title">ICT, Productivity, and U.S. Economic Growth: A Python Panel Analysis</h1>
+						<div class="entry-meta"><span class="posted-on">Sep 2023 &ndash; Dec 2023</span></div>
 					</header>
 					<div class="entry-content">
 						<p><strong>Objective:</strong> Investigated how the diffusion of ICT influences U.S. economic development and productivity growth.</p>
 						<ul>
-							<li>Completed a panel dataset (Excel-based) of 51 U.S. states (2015&ndash;2022) using official Census and BEA data covering ICT, income, and demographic variables.</li>
-							<li>Applied two-way fixed-effects regression in Python to model the impact of digitalization on real GDP.</li>
-							<li>Processed and visualized empirical results, confirming that ICT investment significantly promotes regional economic development.</li>
+							<li>Built a panel dataset covering 50 U.S. states from 2015&ndash;2022 using Census and BEA data on ICT, income, and demographics.</li>
+							<li>Estimated two-way fixed-effects models in Python and visualized results to evaluate the relationship between digitalization and real GDP growth.</li>
 						</ul>
 					</div>
 				</article>
 
-				<article class="post">
+				<article class="post" id="green-credit">
 					<header class="entry-header">
-						<h1 class="entry-title">The Effect of Green Credit Policy on Diminishing Environment Pollution in China</h1>
-						<div class="entry-meta"><span class="posted-on">Sept 2023 &ndash; Dec 2023</span></div>
+						<h1 class="entry-title">Green Credit Policy and Environmental Pollution in China: A Python Panel Analysis</h1>
+						<div class="entry-meta"><span class="posted-on">Sep 2023 &ndash; Dec 2023</span></div>
 					</header>
 					<div class="entry-content">
 						<p><strong>Objective:</strong> Assessed the impact of China's green credit policies on reducing industrial air pollution and promoting sustainability.</p>
 						<ul>
-							<li>Built a provincial panel dataset (2000&ndash;2020) from the <em>China Statistical Yearbook</em>, <em>Energy Statistical Yearbook</em>, and <em>Environment Statistical Yearbook</em>, integrating economic, financial, and environmental indicators.</li>
-							<li>Applied a panel regression with two-way fixed effects in Python to estimate how the Green Credit Index, investment, and regulation affect pollution levels.</li>
-							<li>Verified multicollinearity and model consistency, confirming that green credit significantly contributes to pollution mitigation.</li>
+							<li>Integrated provincial economic, financial, energy, and environmental data for China from 2000&ndash;2020 and constructed a Green Credit Index.</li>
+							<li>Applied two-way fixed-effects regression in Python and performed multicollinearity and model-consistency checks to assess pollution-mitigation effects.</li>
 						</ul>
 					</div>
 				</article>
 
-				<article class="post">
+				<h2 class="section-title topspace"><span>Earlier Undergraduate Work</span></h2>
+
+				<article class="post" id="inequality-poverty">
 					<header class="entry-header">
 						<h1 class="entry-title">Trade-off Between Inequality and Poverty: Examples From the U.S.</h1>
 						<div class="entry-meta"><span class="posted-on">Feb 2022 &ndash; May 2022</span></div>
@@ -103,7 +135,7 @@
 					</div>
 				</article>
 
-				<article class="post">
+				<article class="post" id="household-poverty">
 					<header class="entry-header">
 						<h1 class="entry-title">The Effect of Household Poverty on Children: Examples From WKU</h1>
 						<div class="entry-meta"><span class="posted-on">Feb 2022 &ndash; May 2022</span></div>
@@ -130,9 +162,13 @@
 				<h3 class="widget-title">Contact</h3>
 				<div class="widget-body">
 					<p>
-						<a href="mailto:lhs178604@gmail.com">lhs178604@gmail.com</a><br>
+						<a href="mailto:hongshi.liu.2027@anderson.ucla.edu">hongshi.liu.2027@anderson.ucla.edu</a><br>
 						+1 (240) 723-9548<br>
-						College Park, Maryland, USA
+						Los Angeles, California, USA
+					</p>
+					<p>
+						<a href="https://www.linkedin.com/in/hongshi-liu"><i class="fa fa-linkedin"></i> LinkedIn</a> &nbsp;|&nbsp;
+						<a href="https://github.com/nitricmaster"><i class="fa fa-github"></i> GitHub</a>
 					</p>
 				</div>
 			</div>
@@ -143,7 +179,7 @@
 					<p>
 						<a href="index.html">Home</a> &nbsp;|&nbsp;
 						<a href="cv.html">CV</a> &nbsp;|&nbsp;
-						<a href="research.html">Research</a> &nbsp;|&nbsp;
+						<a href="research.html">Projects</a> &nbsp;|&nbsp;
 						<a href="contact.html">Contact</a>
 					</p>
 				</div>
@@ -159,14 +195,14 @@
 
 			<div class="col-md-6 widget">
 				<div class="widget-body">
-					<p>University of Maryland, College Park</p>
+					<p>UCLA Anderson School of Management</p>
 				</div>
 			</div>
 
 			<div class="col-md-6 widget">
 				<div class="widget-body">
 					<p class="text-right">
-						Copyright &copy; 2025, Hongshi Liu<br>
+						Copyright &copy; 2026, Hongshi Liu<br>
 						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a>
 					</p>
 				</div>
